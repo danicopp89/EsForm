@@ -1,0 +1,71 @@
+body{
+    background-image: url("R.jfif");
+}
+
+p{
+    color: gray;
+    font-size: small;
+    text-align: left;
+}
+
+@media (min-width: 1025px) and (max-width: 1400px){
+    html{
+        font-size: 1em;
+        max-width: 1400px;
+        margin-left: 10px;
+    }
+    input, select, textarea{
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 980px) and (max-width: 1024px){
+    html{
+        font-size: 1em;
+        max-width: 1024px;
+        margin-left: 10px;
+    }
+    input, select, textarea{
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px){
+    html{
+        font-size: 2em;
+        max-width: 979px;
+    }
+    input, select, textarea{
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 481px) and(max-width: 767px){
+    html{
+        font-size: 1em;
+        max-width: 767px;
+    }
+    input, select, textarea{
+        font-size: 0.5em;
+    }
+}
+
+@media (min-width: 321px) and(max-width: 480px){
+    html{
+        font-size: 0.5em;
+        max-width: 480px;
+    }
+    input, select, textarea{
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 320px){
+    html{
+        font-size: 0.5em;
+        max-width: 320px;
+    }
+    input, select, textarea{
+        font-size: 0.5em;
+    }
+}

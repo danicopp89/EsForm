@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Richieste</h1><br>
+</header>
+<form action="" method="post" id="form" name="form" onsubmit="return validaForm();">
+    <label for="cognome"><strong>Cognome:</strong></label><br>
+    <input type="text" id="cognome" name="cognome" size="40" maxlength="40" placeholder="cognome">
+    <br>
+    <br>
+    <label for="nome"><strong>Nome:</strong></label><br>
+    <input type="text" id="nome" name="nome" size="30" maxlength="30" placeholder="nome">
+    <br>
+    <br>
+    <label for="matricola"><strong>Matricola:</strong></label><br>
+    <input type="text" id="matricola" name="matricola" size="12" maxlength="12" placeholder="matricola">
+    <br>
+    <br>
+    <strong>Regione:</strong><br>
+    <select name="regione">
+        <option value="nessuna" selected>Select</option>
+        <option value="valdaosta">Val d'Aosta</option>
+        <option value="piemonte">Piemonte</option>
+        <option value="liguria">Liguria</option>
+        <option value="lombardia">Lombardia</option>
+        <option value="veneto">Veneto</option>
+        <option value="trentino">Trentino Alto Adige</option>
+        <option friuli="veneto">Friuli Venezia Giulia</option>
+        <option value="emilia">Emilia Romagna</option>
+        <option value="toscana">Toscana</option>
+        <option value="marche">Marche</option>
+        <option value="umbria">Umbria</option>
+        <option value="lazio">Lazio</option>
+        <option value="abruzzo">Abruzzo</option>
+        <option value="molise">Molise</option>
+        <option value="campania">Campania</option>
+        <option value="basilicata">Basilicata</option>
+        <option value="puglia">Puglia</option>
+        <option value="calabria">Calabria</option>
+        <option value="sicilia">Sicilia</option>
+        <option value="sardegna">Sardegna</option>
+    </select>
+    <br>
+    <br>
+    <label for="email"><strong>Email:</strong></label><br>
+    <input type="email" id="email" name="email" size="30" maxlength="30" placeholder="email">
+    <br>
+    <br>
+    <label for="tel"><strong>Telefono:</strong></label><br>
+    <input type="text" id="tel" name="tel" size="15" maxlength="15" placeholder="telefono">
+    <br>
+    <br>
+    <strong>Richieste:</strong><br>
+    <textarea name="richieste" cols="40" rows="12"></textarea>
+    <br>
+    <br>
+    <input type="submit" value="Invia">
+    <input type="reset" value="Reset">
+</form>
+<br>
+<br>
+<footer>
+    <p>danielacoppola89@gmail.com</p>
+</footer>
+<script type="text/javascript" language="JavaScript">
+    function validaForm(){
+        if (document.form.cognome.value=="") {
+            alert("Inserire cognome");
+            return false;
+        }
+        if (document.form.nome.value=="") {
+            alert("Inserire nome");
+            return false;
+        }
+        if (document.form.matricola.value=="") {
+            alert("Inserire matricola");
+            return false;
+        }
+        let v = parseInt(document.form.matricola.value);
+        if (isNaN(v)) {
+            alert("La matricola deve essere un numero");
+            return false;
+        }
+        if (document.form.regione.value=="nessuna") {
+            alert("Selezionare una regione");
+            return false;
+        }
+        if ((document.form.email.value=="")&&(document.form.tel.value=="")) {
+            alert("Inserire o l'email o il numero di telefono");
+            return false;
+        }
+        if (document.form.richieste.value==""){
+            alert("Inserire una richiesta");
+            return false;
+        }
+        alert("Dati inseriti correttamente. Riceverà un riscontro sul recapito da lei indicato.");
+        return true;
+    }
+</script>
+</body>
+</html>
