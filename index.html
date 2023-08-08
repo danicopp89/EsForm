@@ -12,15 +12,29 @@
 </header>
 <form action="" method="post" id="form" name="form" onsubmit="return validaForm();">
     <label for="cognome"><strong>Cognome:</strong></label><br>
-    <input type="text" id="cognome" name="cognome" size="40" maxlength="40" placeholder="cognome">
+    <input type="text" id="cognome" name="cognome" size="40" maxlength="40" placeholder="cognome" onchange="return controllaCognome();">
     <br>
     <br>
     <label for="nome"><strong>Nome:</strong></label><br>
-    <input type="text" id="nome" name="nome" size="30" maxlength="30" placeholder="nome">
+    <input type="text" id="nome" name="nome" size="30" maxlength="30" placeholder="nome" onchange="return controllaNome()">
+    <br>
+    <br>
+    <label for="sesso"><strong>Sesso:</strong></label>
+    <input type="radio" id="sesso" name="sesso" value="M" onclick="s=this.value;">M
+    <input type="radio" name="sesso" value="F"onclick="this.value;">F
+    <br>
+    <br>
+    <strong>Ateneo:</strong><br>
+    <select name="ateneo">
+        <option value="nessuno" selected>Select</option>
+        <option value="sapienza">La Sapienza</option>
+        <option value="torvergata">Tor Vergata</option>
+        <option value="romatre">Roma Tre</option>
+    </select>
     <br>
     <br>
     <label for="matricola"><strong>Matricola:</strong></label><br>
-    <input type="text" id="matricola" name="matricola" size="12" maxlength="12" placeholder="matricola">
+    <input type="text" id="matricola" name="matricola" size="12" maxlength="12" placeholder="matricola" onchange="return controllaMatricola();">
     <br>
     <br>
     <strong>Regione:</strong><br>
@@ -49,12 +63,24 @@
     </select>
     <br>
     <br>
+    <label for="cap"><strong>Cap:</strong></label><br>
+    <input type="text" id="cap" name="cap" size="5" maxlength="5" placeholder="CAP" onchange="return controllaCap()">
+    <br>
+    <br>
     <label for="email"><strong>Email:</strong></label><br>
     <input type="email" id="email" name="email" size="30" maxlength="30" placeholder="email">
     <br>
     <br>
     <label for="tel"><strong>Telefono:</strong></label><br>
     <input type="text" id="tel" name="tel" size="15" maxlength="15" placeholder="telefono">
+    <br>
+    <br>
+    <strong>Sono uno studente lavoratore:</strong>
+    <input type="checkbox" name="lavoratore">
+    <br>
+    <br>
+    <strong>Descrizione lavoro:</strong><br>
+    <textarea name="lavoro" cols="30" rows="5"></textarea>
     <br>
     <br>
     <strong>Richieste:</strong><br>
